@@ -29,8 +29,9 @@
   };
 
   const generateStory = async () => {
+    const apiKey = import.meta.env.VITE_OPENAI_KEY ?? "";
     const configuration = new Configuration({
-      apiKey: "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",
+      apiKey,
     });
     const openai = new OpenAIApi(configuration);
     const response = await openai.createCompletion("text-davinci-001", {

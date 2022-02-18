@@ -10,13 +10,14 @@
   },
   "dependencies": {
     "@google-cloud/text-to-speech": "^3.4.0",
+    "dotenv-webpack": "^7.1.0",
     "openai": "^2.0.4",
     "pinia": "^2.0.11",
     "vue": "^3.2.29"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
-    "@types/node": "^16.11.22",
+    "@types/node": "^16.11.25",
     "@vitejs/plugin-vue": "^2.1.0",
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/eslint-config-typescript": "^10.0.0",
