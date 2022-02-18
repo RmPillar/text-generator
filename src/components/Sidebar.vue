@@ -44,11 +44,5 @@
       AIText.value = response.data.choices[0].text;
       emit("generatedStory", response.data.choices[0].text);
     }
-
-    // const playAudio = () => {
-    //   let speech = new SpeechSynthesisUtterance();
-    //   speech.text = AIText ?? '';
-    //   window.speechSynthesis.speak(speech);
-    // };
   };
 </script>
