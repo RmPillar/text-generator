@@ -4,7 +4,7 @@
       @input="updateInstructionValue"
       class="mb-2"
       label="Tell Me What To Do"
-      initalValue="Tell me a story about a wild Charmander"
+      initalValue="Tell me a story about an adventure"
     />
     <button class="w-full px-2 py-4 bg-white" @click="generateStory">
       Generate
