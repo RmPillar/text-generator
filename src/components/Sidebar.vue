@@ -22,9 +22,9 @@
   const emit = defineEmits(["generatedStory"]);
 
   const inputValue = ref("");
-  const AIText = ref<String | undefined>("");
+  const AIText = ref("");
 
-  const updateInstructionValue = (value: string) => {
+  const updateInstructionValue = (value) => {
     inputValue.value = value;
   };
 
