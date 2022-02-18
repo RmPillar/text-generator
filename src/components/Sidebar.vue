@@ -37,7 +37,7 @@
     const response = await openai.createCompletion("text-davinci-001", {
       prompt: inputValue.value,
       max_tokens: 1000,
-      temperature: 1,
+      temperature: 1.5,
     });
 
     if (response && response.data && response.data.choices) {
