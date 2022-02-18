@@ -4,7 +4,6 @@
       @input="updateInstructionValue"
       class="mb-2"
       label="Tell Me What To Do"
-      initalValue="Write a story"
     />
     <button class="w-full px-2 py-4 bg-white" @click="generateStory">
       Generate

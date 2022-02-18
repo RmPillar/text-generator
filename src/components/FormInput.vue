@@ -13,9 +13,9 @@
 <script setup lang="ts">
   import { ref } from "vue";
 
-  const props = defineProps(["label", "type", "initalValue"]);
+  const props = defineProps(["label", "type"]);
 
-  const inputValue = ref(props.initalValue);
+  const inputValue = ref("");
   const emit = defineEmits(["input"]);
 
   const setValue = (e) => {
