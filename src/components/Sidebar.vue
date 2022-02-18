@@ -30,6 +30,7 @@
 
   const generateStory = async () => {
     const apiKey = import.meta.env.VITE_OPENAI_KEY ?? "";
+    console.log(apiKey);
     const configuration = new Configuration({
       apiKey,
     });
