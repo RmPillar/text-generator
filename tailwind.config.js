@@ -106,7 +106,11 @@ module.exports = {
     minHeight: (theme) => ({
       ...theme("spacing"),
     }),
-    extend: {},
+    extend: {
+      container: {
+        centered: true,
+      },
+    },
   },
   plugins: [],
 };

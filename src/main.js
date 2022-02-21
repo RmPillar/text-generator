@@ -11,21 +11,6 @@ defineRule("required", (value) => {
   return true;
 });
 
-defineRule("requiredSelect", (value) => {
-  if (value.value === "story") {
-    return "testing";
-  }
-  if (
-    !value.name ||
-    !value.name.length ||
-    !value.value ||
-    !value.value.length
-  ) {
-    return "This field is required";
-  }
-  return true;
-});
-
 import App from "./App.vue";
 
 const app = createApp(App);

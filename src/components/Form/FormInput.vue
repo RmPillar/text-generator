@@ -2,7 +2,7 @@
   <div class="flex flex-col group">
     <label class="text-white mb-0.5" v-text="label"></label>
     <Field
-      class="w-full rounded-lg bg-white/50 px-20 py-10 group-hover:bg-white/100 group-focus-within:bg-white/100 transition-colors duration-500 outline-none"
+      class="w-full rounded-lg bg-white/50 px-20 py-10 text-white group-hover:text-gray-800 group-focus-within:text-gray-800 group-hover:bg-white/100 group-focus-within:bg-white/100 transition-colors duration-500 outline-none"
       :value="inputValue"
       :type="type"
       :rules="rules"
@@ -19,5 +19,4 @@
   const props = defineProps(["label", "type", "name", "rules"]);
 
   const inputValue = ref("");
-  const emit = defineEmits(["input"]);
 </script>

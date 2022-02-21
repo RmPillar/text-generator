@@ -160,7 +160,7 @@
       }
       .form-select__list {
         overflow-y: scroll;
-        max-height: 150px;
+        max-height: 300px;
       }
       .form-select__input {
         width: 100%;

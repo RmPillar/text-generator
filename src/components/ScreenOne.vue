@@ -8,7 +8,11 @@
           { name: 'Story', value: 'story' },
           { name: 'Song', value: 'song' },
           { name: 'Script', value: 'script' },
-          { name: 'Sermon', value: 'sermon' },
+          { name: 'Church Preach', value: 'church preach' },
+          { name: 'Poem', value: 'poem' },
+          { name: 'Haiku', value: 'haiku' },
+          { name: 'Limerick', value: 'limerick' },
+          { name: 'Political Speech', value: 'political speech' },
         ]"
         name="category"
         label="Write me a..."
