@@ -61,7 +61,7 @@
   import { ref, watch } from "vue";
   import { Field, ErrorMessage } from "vee-validate";
   import { usePopper } from "../../composables/usePopper";
-  import Chevron from "../Icons/chevron.vue";
+  import Chevron from "../Icons/Chevron.vue";
 
   const emit = defineEmits(["input"]);
   const props = defineProps([
