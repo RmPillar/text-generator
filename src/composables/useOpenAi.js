@@ -17,14 +17,14 @@ export const useOpenAi = () => {
     openAi.value = null;
   });
 
-  const createAiCompletion = async (text) => {
+  const createAiCompletion = async (text, temperature = 0) => {
     const AiResponse = ref(null);
 
     if (openAi.value && text) {
       const response = await openAi.value.createCompletion("text-davinci-001", {
         prompt: text,
         max_tokens: 500,
-        temperature: 0.1,
+        temperature: parseFloat(temperature),
       });
 
       if (response && response.data && response.data.choices) {

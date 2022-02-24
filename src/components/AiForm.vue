@@ -15,7 +15,6 @@
               :options="[
                 { name: 'British (Male)', value: 'Brian' },
                 { name: 'British (Female)', value: 'Amy' },
-                { name: 'British (Female)', value: 'Amy' },
                 { name: 'US (Male)', value: 'Matthew' },
                 { name: 'US (Female)', value: 'Salli' },
                 { name: 'US (Male Child)', value: 'Kevin' },
@@ -29,6 +28,15 @@
               label="What Accent Do You Want"
               class="mb-20"
             />
+            <FormSlider
+              name="randomness"
+              label="Result Randomness"
+              class="mb-20"
+              :initial-value="0.1"
+              :min="0"
+              :max="1"
+            />
+
             <BtnBlock label="Generate" :isLoading="store.isLoading" />
           </div>
         </div>
@@ -47,14 +55,15 @@
   import { useAWSPolly } from "../composables/useAWSPolly";
   import { useOpenAi } from "../composables/useOpenAi";
   import { useFormStore } from "../stores/form";
+  import FormSlider from "./Form/FormSlider.vue";
 
   const { createAiCompletion } = useOpenAi();
   const store = useFormStore();
 
-  const handleSubmit = async ({ aiInput, accent }) => {
+  const handleSubmit = async ({ aiInput, accent, randomness }) => {
     store.isLoading = true;
 
-    const aiResponse = await createAiCompletion(aiInput);
+    const aiResponse = await createAiCompletion(aiInput, randomness);
 
     if (aiResponse) {
       store.isLoading = false;
