@@ -1,8 +1,14 @@
 <template>
   <section
-    class="hero flex flex-col items-center justify-center bg-gradient-to-br from-green-400 to-green-600 min-h-[500px]"
+    class="hero flex flex-col items-center justify-center bg-gradient-to-br from-green-400 to-green-600 min-h-[300px] lg:min-h-[500px]"
   >
-    <h1 class="text-slate-100 text-7xl font-black mb-50">AI Text Generator</h1>
+    <div class="container">
+      <h1
+        class="text-slate-100 text-5xl lg:text-7xl font-black mb-50 text-center"
+      >
+        AI Text Generator
+      </h1>
+    </div>
   </section>
 </template>
 

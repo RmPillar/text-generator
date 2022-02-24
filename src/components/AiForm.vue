@@ -2,13 +2,13 @@
   <section class="global-aiForm">
     <div class="container">
       <Form @submit="handleSubmit">
-        <div class="grid grid-cols-3 gap-20">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-20">
           <FormTextarea
             label="Tell Me What To Do."
             name="aiInput"
             rules="required"
             placeholder="Write a story"
-            class="col-span-2"
+            class="col-span-1 lg:col-span-2"
           />
           <div class="col-span-1">
             <FormSelect
@@ -69,7 +69,6 @@
       store.isLoading = false;
       store.showForm = false;
 
-      console.log(aiResponse.value);
       store.aiBody = aiResponse.value;
 
       const { url } = await useAWSPolly(aiResponse.value, accent);

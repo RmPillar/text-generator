@@ -14,9 +14,12 @@
         <div
           class="w-20 h-20 rounded-full bg-white border-2 border-green-500 absolute left-0 top-6/12 -translate-y-6/12 cursor-pointer"
           ref="thumbRef"
-          @mousedown="setMouseDown(true)"
-          @mouseup="setMouseDown(false)"
-          @mousemove="setSliderValue"
+          v-touch="{
+            start: setMouseDown,
+            end: setMouseUp,
+            move: setSliderValue,
+            resize: setSliderDimensions,
+          }"
         />
       </div>
       <span class="ml-5 block" v-text="max"></span>
@@ -34,9 +37,9 @@
 </template>
 
 <script setup>
-  import { ref, onMounted, onBeforeUnmount } from "vue";
+  import { ref } from "vue";
   import { Field, ErrorMessage } from "vee-validate";
-  import { throttle } from "lodash";
+  import vTouchDirective from "../../../directives/v-touch";
 
   const props = defineProps({
     label: String,
@@ -47,6 +50,8 @@
     initialValue: Number,
     rules: String,
   });
+
+  const vTouch = vTouchDirective;
 
   const sliderOffsetWidth = ref(0);
   const sliderOffsetLeft = ref(0);
@@ -65,8 +70,9 @@
     isMouseDown.value = false;
   };
 
-  const setSliderValue = ({ clientX }) => {
-    if (!isMouseDown.value) return;
+  const setSliderValue = (clientX) => {
+    if (!isMouseDown.value || typeof clientX !== "number") return;
+    console.log(clientX, "<<<<");
 
     const mouseDrag =
       clientX - sliderOffsetLeft.value - thumbOffsetWidth.value / 2;
@@ -102,17 +108,4 @@
 
     thumbRef.value.style.transform = `translate(${translateX}px, -50%`;
   };
-
-  onMounted(() => {
-    window.addEventListener("mouseup", setMouseUp);
-    window.addEventListener("mousemove", setSliderValue);
-    window.addEventListener("resize", throttle(setSliderDimensions, 100));
-
-    setSliderDimensions();
-  });
-
-  onBeforeUnmount(() => {
-    window.removeEventListener("mouseup", setMouseUp);
-    window.removeEventListener("mousemove", setSliderValue);
-  });
 </script>
