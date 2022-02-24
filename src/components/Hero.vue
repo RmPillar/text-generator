@@ -6,7 +6,7 @@
   </section>
 </template>
 
-<style>
+<style lang="postcss">
   .global-hero {
     clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
   }
