@@ -1,5 +1,5 @@
 <template>
-  <main class="min-h-screen flex flex-col">
+  <main class="min-h-screen flex flex-col pb-100">
     <Hero class="mb-50" />
     <AiForm v-if="store.showForm" />
     <AiResult v-if="!store.showForm" />
