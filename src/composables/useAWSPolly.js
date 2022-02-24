@@ -3,7 +3,7 @@ import { fromCognitoIdentityPool } from "@aws-sdk/credential-provider-cognito-id
 import { Polly } from "@aws-sdk/client-polly";
 import { getSynthesizeSpeechUrl } from "@aws-sdk/polly-request-presigner";
 
-export const useAWSPolly = async (text) => {
+export const useAWSPolly = async (text, VoiceId) => {
   const client = new Polly({
     region: "eu-west-2",
     credentials: fromCognitoIdentityPool({
@@ -15,8 +15,9 @@ export const useAWSPolly = async (text) => {
   const speechParams = {
     OutputFormat: "mp3", // For example, 'mp3'
     SampleRate: "24000",
+    Engine: "neural",
     Text: text, // The 'speakText' function supplies this value
-    VoiceId: "Amy", // For example, "Matthew"
+    VoiceId, // For example, "Matthew"
   };
 
   const url = await getSynthesizeSpeechUrl({

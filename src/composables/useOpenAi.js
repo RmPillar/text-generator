@@ -17,12 +17,12 @@ export const useOpenAi = () => {
     openAi.value = null;
   });
 
-  const createAiCompletion = async (category, topic) => {
+  const createAiCompletion = async (text) => {
     const AiResponse = ref(null);
 
-    if (openAi.value && category && topic) {
+    if (openAi.value && text) {
       const response = await openAi.value.createCompletion("text-davinci-001", {
-        prompt: `Write a ${category} about ${topic}`,
+        prompt: text,
         max_tokens: 500,
         temperature: 0.1,
       });

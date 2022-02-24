@@ -108,7 +108,8 @@ module.exports = {
     }),
     extend: {
       container: {
-        centered: true,
+        center: true,
+        padding: "20px",
       },
     },
   },

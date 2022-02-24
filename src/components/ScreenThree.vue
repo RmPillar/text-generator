@@ -45,7 +45,6 @@
   const audio = ref("");
 
   const generateAiResponse = async () => {
-    console.log(audioRef.value);
     isLoading.value = true;
 
     const aiResponse = await createAiCompletion(store.category, store.topic);

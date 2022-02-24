@@ -1,6 +1,10 @@
 <template>
   <div class="form-select group">
-    <label class="form-label text-white" :for="name" v-text="label" />
+    <label
+      class="form-label text-gray-900 text-xl mb-10"
+      :for="name"
+      v-text="label"
+    />
 
     <div
       ref="triggerRef"
@@ -20,12 +24,12 @@
       >
         <ul
           ref="dropdown"
-          class="form-select__list px-20 py-10 bg-white shadow-lg"
+          class="form-select__list py-10 bg-white shadow-lg border-2 border-green-500"
         >
           <li
             v-for="(option, index) in options"
             :key="index"
-            class="form-select__option"
+            class="form-select__option px-20 hover:bg-green-500/10 transition-colors duration-300 cursor-pointer"
             @click="updateValue(option, index)"
             v-text="option.name"
           />
@@ -34,8 +38,8 @@
 
       <input
         v-model="selectValue.name"
-        class="form-select__input bg-white/50 rounded-lg px-20 py-10 group-hover:bg-white/100 transition-colors duration-500"
-        :class="{ 'bg-white/100': isOpen }"
+        class="form-select__input px-20 py-10 text-gray-900 border-2 border-green-500 transition-all duration-500 outline-none!important"
+        :class="{ 'shadow-lg': isOpen }"
         type="text"
         :placeholder="placeholder"
         :disabled="disabled"
@@ -53,7 +57,7 @@
       :rules="rules"
       readonly
     />
-    <ErrorMessage :name="name" class="text-white" />
+    <ErrorMessage :name="name" class="text-gray-900" />
   </div>
 </template>
 
@@ -134,26 +138,22 @@
           &[data-popper-placement="top"] {
             .form-select__list {
               /* border-bottom: 1px solid transparent; */
-              border-radius: 0.75rem;
               margin-bottom: 5px;
             }
 
             & ~ .form-input {
               /* border-top: 1px solid transparent; */
-              border-radius: 0.75rem;
             }
           }
 
           &[data-popper-placement="bottom"] {
             .form-select__list {
               /* border-top: 1px solid transparent; */
-              border-radius: 0.75rem;
               margin-top: 5px;
             }
 
             & ~ .form-input {
               /* border-bottom: 1px solid transparent; */
-              border-radius: 0.75rem;
             }
           }
         }
