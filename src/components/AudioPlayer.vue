@@ -7,7 +7,6 @@
 <script setup>
   import { ref, onMounted, watch } from "vue";
   import { useFormStore } from "../stores/form";
-  import Plyr from "plyr";
 
   const store = useFormStore();
 
@@ -43,6 +42,8 @@
 </script>
 
 <style>
+  @import "../../node_modules/plyr/dist/plyr.css";
+
   .plyr {
     --plyr-color-main: #22c55e;
   }
