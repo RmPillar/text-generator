@@ -43,8 +43,6 @@
 </script>
 
 <style>
-  @import "../../node_modules/plyr/dist/plyr.css";
-
   .plyr {
     --plyr-color-main: #22c55e;
   }
