@@ -2,7 +2,9 @@
   <section class="global-aiResult" ref="sectionRef">
     <div class="container">
       <div v-if="store.aiBody" class="mb-50">
-        <pre class="text-slate-900 text-lg font-sans">{{ store.aiBody }}</pre>
+        <p class="text-slate-900 text-lg whitespace-pre-wrap">
+          {{ store.aiBody }}
+        </p>
       </div>
 
       <AudioPlayer v-if="store.audio" />
