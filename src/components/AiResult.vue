@@ -1,5 +1,5 @@
 <template>
-  <section class="global-aiResult">
+  <section class="global-aiResult" ref="sectionRef">
     <div class="container">
       <p
         v-if="store.aiBody"
@@ -13,9 +13,18 @@
 </template>
 
 <script setup>
+  import { onMounted, ref } from "vue";
   import { useFormStore } from "../stores/form";
 
   import AudioPlayer from "./AudioPlayer.vue";
 
   const store = useFormStore();
+
+  const sectionRef = ref(null);
+
+  onMounted(() => {
+    if (sectionRef.value) {
+      sectionRef.value.scrollIntoView({ behavior: "smooth", inline: "center" });
+    }
+  });
 </script>

@@ -1,7 +1,7 @@
 <template>
   <main class="min-h-screen flex flex-col pb-100">
     <Hero class="mb-50" />
-    <AiForm v-if="store.showForm" />
+    <AiForm class="mb-50" />
     <AiResult v-if="!store.showForm" />
   </main>
 </template>

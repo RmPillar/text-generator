@@ -30,7 +30,7 @@
             />
             <FormSlider
               name="randomness"
-              label="Randomness"
+              label="Variance"
               class="mb-20"
               :initial-value="0.1"
               :min="0"
