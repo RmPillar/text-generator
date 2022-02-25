@@ -6,7 +6,6 @@ export const usePopper = (trigger, dropdown) => {
 
   onMounted(() => {
     if (trigger && dropdown) {
-      console.log(trigger, dropdown);
       popper.value = new createPopper(trigger.value, dropdown.value);
     }
   });

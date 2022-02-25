@@ -1,11 +1,9 @@
 <template>
   <section class="global-aiResult" ref="sectionRef">
     <div class="container">
-      <p
-        v-if="store.aiBody"
-        v-text="store.aiBody"
-        class="text-slate-900 text-lg mb-50"
-      ></p>
+      <div v-if="store.aiBody" class="mb-50">
+        <pre class="text-slate-900 text-lg font-sans">{{ store.aiBody }}</pre>
+      </div>
 
       <AudioPlayer v-if="store.audio" />
     </div>

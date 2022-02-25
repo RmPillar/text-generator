@@ -72,7 +72,6 @@
 
   const setSliderValue = (clientX) => {
     if (!isMouseDown.value || typeof clientX !== "number") return;
-    console.log(clientX, "<<<<");
 
     const mouseDrag =
       clientX - sliderOffsetLeft.value - thumbOffsetWidth.value / 2;

@@ -29,8 +29,6 @@
   watch(store, () => {
     if (!player.value || !store.audio) return;
 
-    console.log(store.audio);
-
     player.value.source = {
       type: "audio",
       title: "Ai Text Audio",
