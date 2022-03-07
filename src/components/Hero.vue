@@ -25,8 +25,6 @@
   import "splitting/dist/splitting-cells.css";
   import Splitting from "splitting";
 
-  // import { useSplitting } from "../composables/useSplitting";
-
   const splitText = ref(null);
 
   const animateHeading = ref(null);
