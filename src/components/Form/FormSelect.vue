@@ -1,7 +1,7 @@
 <template>
   <div class="form-select group">
     <label
-      class="form-label text-gray-900 text-xl mb-10"
+      class="text-zinc-100 font-silkaMono mb-5"
       :for="name"
       v-text="label"
     />
@@ -11,7 +11,7 @@
       class="form-select__wrapper"
       v-click-outside="closeDropdown"
     >
-      <div class="form-select__icons z-10 mr-10">
+      <div class="form-select__icons z-10 mr-10 text-zinc-100">
         <span :class="{ 'flip-y': isOpen }" class="form-select__icons__icon">
           <Chevron />
         </span>
@@ -19,17 +19,17 @@
 
       <div
         ref="dropdownRef"
-        class="form-select__dropdown"
+        class="form-select__dropdown bg-zinc-900"
         :class="isOpen ? 'is-visible' : 'is-hidden'"
       >
         <ul
           ref="dropdown"
-          class="form-select__list py-10 bg-white shadow-lg border-2 border-green-500"
+          class="form-select__list py-10 bg-zinc-100/10 shadow-lg"
         >
           <li
             v-for="(option, index) in options"
             :key="index"
-            class="form-select__option px-20 hover:bg-green-500/10 transition-colors duration-300 cursor-pointer"
+            class="form-select__option px-20 font-silkaMono text-zinc-100 hover:bg-zinc-500/10 transition-colors duration-300 cursor-pointer"
             @click="updateValue(option, index)"
             v-text="option.name"
           />
@@ -38,7 +38,7 @@
 
       <input
         v-model="selectValue.name"
-        class="form-select__input px-20 py-10 text-gray-900 border-2 border-green-500 transition-all duration-500 outline-none!important"
+        class="form-select__input px-20 py-10 text-zinc-100 font-silkaMono bg-zinc-100/10 transition-all duration-500 outline-none!important"
         :class="{ 'shadow-lg': isOpen }"
         type="text"
         :placeholder="placeholder"
@@ -57,7 +57,7 @@
       :rules="rules"
       readonly
     />
-    <ErrorMessage :name="name" class="text-gray-900" />
+    <ErrorMessage :name="name" class="text-zinc-100 font-silkaMono" />
   </div>
 </template>
 

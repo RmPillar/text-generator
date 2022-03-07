@@ -43,6 +43,9 @@
 
 <style>
   .plyr {
-    --plyr-color-main: #22c55e;
+    --plyr-color-main: rgb(244 244 245 / 0.1);
+    --plyr-control-icon: #f4f4f5;
+    --plyr-audio-control-color: #f4f4f5;
+    --plyr-audio-controls-background: transparent;
   }
 </style>

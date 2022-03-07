@@ -1,3 +1,23 @@
+@font-face {
+  font-family: "Travel Sans Regular";
+  src: url("./fonts/TravelSansFont.woff2") format("woff2"),
+    url("./fonts/TravelSansFont.woff") format("woff"),
+    url("./fonts/TravelSansFont.eot") format("eot");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Silka Mono";
+  src: url("./fonts/silkamono-regular-webfont.woff2") format("woff2"),
+    url("./fonts/silkamono-regular-webfont.eot") format("eot"),
+    url("./fonts/silkamono-regular-webfont.woff") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

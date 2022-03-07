@@ -106,10 +106,52 @@ module.exports = {
     minHeight: (theme) => ({
       ...theme("spacing"),
     }),
+    fontFamily: {
+      travelSans: [
+        "TravelSans-Regular",
+        "Segoe UI",
+        "Helvetica Neue",
+        "Arial",
+        "Noto Sans",
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji",
+        "-apple-system",
+        "sans-serif",
+      ],
+      silkaMono: [
+        "Silka Mono",
+        "Segoe UI",
+        "Helvetica Neue",
+        "Arial",
+        "Noto Sans",
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji",
+        "-apple-system",
+        "sans-serif",
+      ],
+    },
     extend: {
       container: {
         center: true,
         padding: "20px",
+      },
+      screens: {
+        "sm-max": {
+          max: "639px",
+        },
+        "md-max": {
+          max: "767px",
+        },
+        "lg-max": {
+          max: "1023px",
+        },
+        "xl-max": {
+          max: "1279px",
+        },
       },
     },
   },

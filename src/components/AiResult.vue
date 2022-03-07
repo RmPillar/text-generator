@@ -2,7 +2,7 @@
   <section class="global-aiResult" ref="sectionRef">
     <div class="container">
       <div v-if="store.aiBody" class="mb-50">
-        <p class="text-slate-900 text-lg whitespace-pre-wrap">
+        <p class="text-zinc-100 font-silkaMono whitespace-pre-wrap">
           {{ store.aiBody }}
         </p>
       </div>

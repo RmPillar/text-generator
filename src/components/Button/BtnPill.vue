@@ -4,7 +4,7 @@
     @click="handleClick"
   >
     <span
-      class="text-white group-hover:text-gray-800 transition-colors duration-500 relative z-10"
+      class="text-zinc-100 group-hover:text-gray-800 transition-colors duration-500 relative z-10"
       >{{ label }}</span
     >
     <span

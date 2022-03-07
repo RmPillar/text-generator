@@ -1,18 +1,21 @@
 <template>
   <div class="flex flex-col">
     <div class="flex justify-between mb-10">
-      <label class="text-gray-900 text-xl" v-text="label"></label>
+      <label class="text-zinc-100/100 font-silkaMono" v-text="label"></label>
 
-      <span class="text-gray-900 text-xl" v-text="sliderValue"></span>
+      <span
+        class="text-zinc-100/100 font-silkaMono"
+        v-text="sliderValue"
+      ></span>
     </div>
     <div class="flex items-center justify-between w-full">
-      <span class="mr-5 block" v-text="min"></span>
+      <span class="mr-5 font-silkaMono text-zinc-100 block" v-text="min"></span>
       <div
-        class="w-full h-[3px] bg-green-500 rounded-full relative"
+        class="w-full h-[3px] bg-zinc-100/10 rounded-full relative"
         ref="sliderRef"
       >
         <div
-          class="w-20 h-20 rounded-full bg-white border-2 border-green-500 absolute left-0 top-6/12 -translate-y-6/12 cursor-pointer"
+          class="w-20 h-20 rounded-full bg-white border-2 border-zinc-100/10 absolute left-0 top-6/12 -translate-y-6/12 cursor-pointer"
           ref="thumbRef"
           v-touch="{
             start: setMouseDown,
@@ -22,7 +25,7 @@
           }"
         />
       </div>
-      <span class="ml-5 block" v-text="max"></span>
+      <span class="ml-5 font-silkaMono text-zinc-100 block" v-text="max"></span>
     </div>
     <Field
       v-model="sliderValue"
@@ -32,7 +35,7 @@
       :id="name"
       readonly
     />
-    <ErrorMessage :name="name" class="text-white" />
+    <ErrorMessage :name="name" class="text-zinc-100" />
   </div>
 </template>
 
