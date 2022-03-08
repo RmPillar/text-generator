@@ -9,7 +9,7 @@
         Jarvis
       </h1>
       <h2
-        class="animated-subheading col-start-2 md:col-start-6 col-span-10 text-zinc-100/10 text-[70px] md:text-[85px] lg:text-[100px] leading-[60px] md:leading-[70px] lg:leading-[80px] font-travelSans"
+        class="animated-subheading col-start-2 md:col-start-6 col-span-10 text-zinc-100/10 text-[70px] md:text-[85px] lg:text-[100px] leading-[60px] md:leading-[70px] lg:leading-[80px] font-travelSans cursor-pointer"
         data-splitting="chars"
         :class="{ entered: animateSubheading }"
       >
@@ -42,7 +42,7 @@
   });
 </script>
 
-<style>
+<style lang="postcss">
   .word {
     display: inline-block;
     overflow: hidden;
@@ -52,7 +52,14 @@
       display: inline-block;
       transform: translateY(100%);
       transition: transform 1000ms cubic-bezier(0.46, -0.01, 0, 1)
-        calc(var(--char-index) * 100ms);
+          calc(var(--char-index) * 100ms),
+        color 300ms;
+
+      cursor: default;
+
+      &:hover {
+        color: rgb(244 244 245 / 0.5);
+      }
     }
   }
   .animated-subheading {
@@ -60,7 +67,14 @@
       display: inline-block;
       transform: translateY(100%);
       transition: transform 500ms cubic-bezier(0.46, -0.01, 0, 1)
-        calc(var(--char-index) * 100ms);
+          calc(var(--char-index) * 100ms),
+        color 300ms;
+
+      cursor: default;
+
+      &:hover {
+        color: rgb(244 244 245 / 0.5);
+      }
     }
   }
 
