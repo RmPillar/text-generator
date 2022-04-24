@@ -4,6 +4,8 @@ import { Polly } from "@aws-sdk/client-polly";
 import { getSynthesizeSpeechUrl } from "@aws-sdk/polly-request-presigner";
 
 export const useAWSPolly = async (text, VoiceId) => {
+  if(!VoiceId) return
+  
   const client = new Polly({
     region: "eu-west-2",
     credentials: fromCognitoIdentityPool({

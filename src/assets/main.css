@@ -1,6 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
-  font-family: "Travel Sans Regular";
-  src: url("./fonts/TravelSansFont.woff2") format("woff2"),
+  font-family: "TravelSans-Regular";
+  src: url("./fonts/TravelSansFont.ttf") format('truetype'), url("./fonts/TravelSansFont.woff2") format("woff2"),
     url("./fonts/TravelSansFont.woff") format("woff"),
     url("./fonts/TravelSansFont.eot") format("eot");
   font-weight: 400;
@@ -17,7 +21,3 @@
   font-style: normal;
   font-display: swap;
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
