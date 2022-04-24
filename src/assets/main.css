@@ -2,9 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply bg-zinc-900;
+}
+
 @font-face {
   font-family: "TravelSans-Regular";
-  src: url("./fonts/TravelSansFont.ttf") format('truetype'), url("./fonts/TravelSansFont.woff2") format("woff2"),
+  src: url("./fonts/TravelSansFont.ttf") format("truetype"),
+    url("./fonts/TravelSansFont.woff2") format("woff2"),
     url("./fonts/TravelSansFont.woff") format("woff"),
     url("./fonts/TravelSansFont.eot") format("eot");
   font-weight: 400;
